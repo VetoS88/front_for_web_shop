@@ -35,6 +35,17 @@ export default {
     columns: [],
     filter: ''
   }),
+  created() {
+    this.$api.get('/api/v1/products/')
+    .then(({data}) => {
+      console.debug(data)
+    }).catch((error) => {
+      this.$q.notify({
+        message: 'Ошибка получения списка товаров',
+        color: 'negative'
+      })
+    })
+  }
 
 }
 </script>

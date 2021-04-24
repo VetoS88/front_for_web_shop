@@ -79,7 +79,7 @@ module.exports = configure(function (ctx) {
       port: 8080,
       proxy: {
         '/api': {
-          target: 'http://localhost:8000/',
+          target: 'http://185.118.167.252:8000/',
           secure: false,
           changeOrigin: true
         }
@@ -102,7 +102,9 @@ module.exports = configure(function (ctx) {
       // directives: [],
 
       // Quasar plugins
-      plugins: []
+      plugins: [
+        'Notify'
+      ]
     },
 
     // animations: 'all', // --- includes all animations
